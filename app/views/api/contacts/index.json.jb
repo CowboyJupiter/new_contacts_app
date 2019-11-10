@@ -1,0 +1,7 @@
+@contact.map do |contact|{
+    name: contact.name,
+    phone: contact.phone,
+    emial: contact.email
+  }
+end
+
