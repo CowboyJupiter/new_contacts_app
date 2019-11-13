@@ -1,5 +1,9 @@
   {
-    name: contact.name,
+    first_name: contact.first_name,
+    middle_name: contact.middle_name,
+    last_name: contact.last_name,
+    full_name: contact.full_name,
     phone: contact.phone,
-    emial: contact.email
+    emial: contact.email,
+    bio: contact.bio
   }
