@@ -1,12 +1,11 @@
 class Api::ContactsController < ApplicationController
   def index
-    @contact = Contact.all
+    @contacts = Contact.all
     render = 'index.json.jb'
   end
 
   def show
-    the_id = params[:id]
-    @contact = Contact.find_by(id: the_id)
+    @contact = Contact.find_by(id: params[:id])
     render 'show.json.jb'
   end
 
@@ -25,12 +24,13 @@ class Api::ContactsController < ApplicationController
     @name = params[:name]
     @phone = params[:phone]
     @email = params[:email]
+    @contact.save
     render 'show.json.jb'
   end
 
   def destroy
     the_id = params[:id]
-    @contact = Conact.find_by(id: the_id)
+    @contact = Contact.find_by(id: the_id)
     @contact.destroy
     render 'destroy.json.jb'
   end 

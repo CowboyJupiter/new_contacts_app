@@ -1,7 +1,4 @@
-@contact.map do |contact|{
-    name: contact.name,
-    phone: contact.phone,
-    emial: contact.email
-  }
+@contacts.map do |contact|
+  render partial: "contact.json.jb", locals: {contact: contact}
 end
 
