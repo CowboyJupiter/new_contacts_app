@@ -18,7 +18,7 @@ class Api::ContactsController < ApplicationController
       first_name: params[:first_name], 
       middle_name: params[:middle_name],
       last_name: params[:last_name],
-      full_name: 
+      # full_name: 
       phone: params[:phone],
       email: params[:email],
       bio: params[:bio],)
