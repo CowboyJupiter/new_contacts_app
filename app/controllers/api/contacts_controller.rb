@@ -10,30 +10,45 @@ class Api::ContactsController < ApplicationController
   end
 
   def create
+    # address = params[:address]
+    # coordinates = Geocoder.coordinates(address)
+    # latitude = coordinates[0]
+    # longitude = coordinates[1]
     @contact = Contact.new(
       first_name: params[:first_name], 
       middle_name: params[:middle_name],
       last_name: params[:last_name],
-      full_name: params[:full_name],
+      full_name: 
       phone: params[:phone],
       email: params[:email],
-      bio: params[:bio])
-    @contact.save
-    render 'show.json.jb'
+      bio: params[:bio],)
+      # lat: latitude,
+      # lng: longitude)
+    if @contact.save
+      render 'show.json.jb'
+    else 
+      render json: {errors: @contacts.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def update
+    # address = params[:address]
     the_id = params[:id]
     @contact = Contact.find_by(id: the_id)
     @first_name = params[:first_name],
     @middle_name = params[:middle_name]
     @last_name = params[:last_name]
-    @full_name = params[:full_name]
+  
     @phone = params[:phone]
     @email = params[:email]
     @bio = params[:bio]
-    @contact.save
-    render 'show.json.jb'
+    @latitude = params[:latitude]
+    @longitude = params[:longitude]
+    if @contact.save
+      render 'show.json.jb'
+    else 
+      render json: {errors: @contacts.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy

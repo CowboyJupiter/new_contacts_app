@@ -5,5 +5,7 @@
     full_name: contact.full_name,
     phone: contact.phone,
     emial: contact.email,
-    bio: contact.bio
+    bio: contact.bio,
+    latitude: contact.latitude,
+    longitude: contact.longitude
   }
