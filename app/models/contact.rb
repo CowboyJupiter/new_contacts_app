@@ -1,7 +1,9 @@
 class Contact < ApplicationRecord
-  validates :first_name, length: {minimum: 1}
-  validates :middle_name, length: {minimum: 1}
-  validates :last_name, length: {minimum: 1}
+  # validates :first_name, length: {minimum: 1}
+  # validates :middle_name, length: {minimum: 1}
+  # validates :last_name, length: {minimum: 1}
+
+  belongs_to :user
 
   
   def friendly_created_at

@@ -2,10 +2,10 @@
     first_name: contact.first_name,
     middle_name: contact.middle_name,
     last_name: contact.last_name,
-    full_name: contact.full_name,
     phone: contact.phone,
     emial: contact.email,
     bio: contact.bio,
     latitude: contact.latitude,
-    longitude: contact.longitude
+    longitude: contact.longitude,
+    user_id: @contact.user_id
   }
