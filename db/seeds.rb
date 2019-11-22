@@ -7,8 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Contact.create(name: "Mat", phone: "1234567", email: "mat@fake.com")
-Contact.create(name: "Maggie", phone: "8910234", email: "maggie@fake.com")
-Contact.create(name: "Amanda", phone: "123456789", email: "amanda@fake.com")
+# Contact.create(name: "Mat", phone: "1234567", email: "mat@fake.com")
+# Contact.create(name: "Maggie", phone: "8910234", email: "maggie@fake.com")
+# Contact.create(name: "Amanda", phone: "123456789", email: "amanda@fake.com")
+
+# Group.create(name: "friends")
+# Group.save
+# Group.create(name: "family")
+
+# Group.create(name: "DO NOT ANSWER")
 
 

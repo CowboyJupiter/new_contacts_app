@@ -26,11 +26,11 @@ class Api::ContactsController < ApplicationController
       phone: params[:phone],
       email: params[:email],
       bio: params[:bio],
-      user_id: current_user.id)
-      # lat: latitude,
-      # lng: longitude)
+      user_id: current_user.id,
+      lat: latitude,
+      lng: longitude)
     if @contact.save
-      render 'show.json.jb'
+      render 'contact.json.jb'
     else 
       render json: {errors: @contacts.errors.full_messages}, status: :unprocessable_entity
     end
